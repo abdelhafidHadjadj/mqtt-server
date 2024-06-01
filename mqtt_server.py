@@ -13,10 +13,10 @@ client.connect(mqtt_broker)
 
 client.loop_start()
 
-dronesID = ["0001", "0002", "0003"]
+vehicleID = ["0001", "0002", "0003"]
 
-for id in dronesID:
-    client.subscribe(f"drone/position/{id}")
+for id in vehicleID:
+    client.subscribe(f"vehicle/position/{id}")
 client.on_message = on_message
 
 while True:
